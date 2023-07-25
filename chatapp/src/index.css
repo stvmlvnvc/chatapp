@@ -1,0 +1,185 @@
+/* Minimal reset */
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+:root {
+    font-family: "Inter", Verdana, Arial, sans-serif;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.App-header {
+    background-color: #ca142d;
+    background-image: linear-gradient(160deg, #e9ab00 0%, #80d0a5 100%);
+    overflow: visible;
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+
+.Wrapper {
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
+
+.Messages {
+    overflow: auto;
+    max-width: 620px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    height: 100%;
+}
+
+.Messages-list {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    flex-grow: 1;
+}
+
+.Messages-message {
+    display: flex;
+    margin-top: 1rem;
+    width: 75%;
+    max-width: 400px;
+}
+
+.Messages-message:last-child {
+    padding-bottom: 1rem;
+}
+
+.Messages-message.currentMember {
+    flex-direction: row-reverse;
+    text-align: right;
+    margin-left: auto;
+}
+
+.Message-content {
+    display: inline-block;
+    width: calc(100% - 45px);
+}
+
+.currentMember > .Message-content {
+    align-items: flex-end;
+}
+
+.Messages-message > .avatar {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 10px 0 0;
+}
+
+.Messages-message.currentMember > .avatar {
+    margin: 0 0 0 10px;
+}
+
+.Message-content > .username {
+    display: block;
+    color: gray;
+    font-size: 14px;
+    padding-bottom: 4px;
+}
+
+.Message-content > .text {
+    padding: 1.1rem;
+    font-size: 0.9rem;
+    max-width: 400px;
+    margin: 0;
+    border-radius: 0 1rem 1rem 1rem;
+    background-color: #e3e3e3;
+    color: #3f3f3f;
+    display: inline-block;
+    text-align: left;
+}
+
+.currentMember > .Message-content .text {
+    border-radius: 1rem 0 1rem 1rem;
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    color: #f7f7f7;
+}
+
+.Input {
+    max-width: 620px;
+    width: 100%;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 0 20px 2px rgba(0,0,0,0.08);
+    border-radius: 1rem;
+}
+
+input {
+    padding: 1rem;
+    font-size: 0.9rem;
+    border-radius: 0.5rem;
+    border: none;
+    flex-grow: 1;
+    color: #3f3f3f;
+}
+
+input:focus {
+    border: none;
+    outline: none;
+}
+
+button {
+    padding: 0.5rem;
+    background-color: transparent;
+    border: none;
+    border-radius: 1rem;
+    margin-left: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
